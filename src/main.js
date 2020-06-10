@@ -4,8 +4,11 @@ import router from './router'
 import store from './store'
 import FastClick from 'fastclick'
 
+import '../node_modules/amfe-flexible/index'
+
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
+import './assets/styles/iconfont.css'
 
 Vue.config.productionTip = false
 
