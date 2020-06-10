@@ -27,10 +27,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~@/assets/styles/variable.scss';
 
 .header {
-  height: .88rem;
-  background-color: #00bcd4;
+  height: $headerHeight;
+  background-color: $bgColor;
   display: flex;
   align-items: center;
   color: #fff;
