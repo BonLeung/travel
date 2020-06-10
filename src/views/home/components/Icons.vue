@@ -89,7 +89,7 @@ export default {
 <style lang="scss" scoped>
 .icons {
   padding-top: .1rem;
-  padding-bottom: .4rem;
+  padding-bottom: .1rem;
   display: flex;
   flex-wrap: wrap;
   .icon {
@@ -106,7 +106,7 @@ export default {
       font-size: .28rem;
     }
   }
-  ::deep .swiper-pagination {
+  ::v-deep .swiper-pagination {
     bottom: 0;
   }
 }

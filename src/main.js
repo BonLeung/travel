@@ -10,6 +10,7 @@ import './assets/styles/reset.css'
 import './assets/styles/border.css'
 import 'swiper/css/swiper.css'
 import './assets/styles/iconfont.css'
+
 import loadingGif from './assets/images/loading.gif'
 
 Vue.config.productionTip = false
