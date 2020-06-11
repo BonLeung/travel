@@ -3,7 +3,11 @@
     <input v-model.trim="keyword" type="text" class="search-input" placeholder="输入城市名称或拼音">
     <div class="search-list-wrapper" v-show="showList" ref="searchListWrapper">
       <ul class="search-list">
-        <li class="search-item border-bottom" v-for="city in list" :key="city.id">{{ city.name }}</li>
+        <li class="search-item border-bottom"
+          v-for="city in list"
+          :key="city.id"
+          @click="handleCityClick(city)"
+        >{{ city.name }}</li>
       </ul>
     </div>
   </div>
@@ -11,6 +15,7 @@
 
 <script>
 import BScroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   name: 'CitySearch',
@@ -24,6 +29,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['city']),
     showList () {
       return this.keyword !== ''
     }
@@ -48,6 +54,16 @@ export default {
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.searchListWrapper)
+  },
+  activated () {
+    this.scroll = new BScroll(this.$refs.searchListWrapper)
+  },
+  methods: {
+    ...mapMutations(['changeCity']),
+    handleCityClick (city) {
+      this.changeCity(city.name)
+      this.$router.push('/')
+    }
   }
 }
 </script>
