@@ -47,6 +47,9 @@ export default {
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.wrapper)
+  },
+  activated () {
+    this.scroll = new BScroll(this.$refs.wrapper)
   }
 }
 </script>
