@@ -15,7 +15,7 @@
 
 <script>
 import BScroll from 'better-scroll'
-import { mapState, mapMutations } from 'vuex'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'CitySearch',
@@ -29,7 +29,6 @@ export default {
     }
   },
   computed: {
-    ...mapState(['city']),
     showList () {
       return this.keyword !== ''
     }

@@ -5,7 +5,7 @@
         <div class="title border-topbottom">当前城市</div>
         <ul class="button-list">
           <li class="button-item">
-            <div class="button">{{ this.$store.state.city }}</div>
+            <div class="button">{{ city }}</div>
           </li>
         </ul>
       </div>
