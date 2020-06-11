@@ -52,10 +52,12 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.searchListWrapper)
+    this.scroll = new BScroll(this.$refs.searchListWrapper, {
+      click: true
+    })
   },
   activated () {
-    this.scroll = new BScroll(this.$refs.searchListWrapper)
+    this.scroll.refresh()
   },
   methods: {
     ...mapMutations(['changeCity']),

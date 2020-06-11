@@ -13,7 +13,7 @@
         <div class="title border-topbottom">热门城市</div>
         <ul class="button-list">
           <li class="button-item" v-for="hot in hots" :key="hot.id">
-            <div class="button" @click="handleClickCity(hot.name)">{{ hot.name }}</div>
+            <div class="button" @click="handleClickCity(hot)">{{ hot.name }}</div>
           </li>
         </ul>
       </div>
@@ -23,7 +23,7 @@
           <li class="city-item border-bottom"
             v-for="city in item"
             :key="city.id"
-            @click="handleClickCity(city.name)"
+            @click="handleClickCity(city)"
           >{{ city.name }}</li>
         </ul>
       </div>
@@ -54,15 +54,17 @@ export default {
     ...mapState(['city'])
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.wrapper)
+    this.scroll = new BScroll(this.$refs.wrapper, {
+      click: true
+    })
   },
   activated () {
-    this.scroll = new BScroll(this.$refs.wrapper)
+    this.scroll.refresh()
   },
   methods: {
     ...mapMutations(['changeCity']),
     handleClickCity (city) {
-      this.changeCity(city)
+      this.changeCity(city.name)
       this.$router.push('/')
     }
   }
