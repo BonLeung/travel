@@ -1,15 +1,32 @@
 <template>
   <div>
-    <detail-banner />
+    <detail-banner @showGallery="handleShowGallery" />
+    <gallery v-show="showGallery" :imgs="galleryImgs" @hide="handleHideGallery" />
   </div>
 </template>
 
 <script>
 import DetailBanner from './components/Banner'
+import Gallery from 'components/common/Gallery.vue'
 
 export default {
   components: {
-    DetailBanner
+    DetailBanner,
+    Gallery
+  },
+  data () {
+    return {
+      showGallery: false,
+      galleryImgs: ['http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg', 'http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png']
+    }
+  },
+  methods: {
+    handleShowGallery () {
+      this.showGallery = true
+    },
+    handleHideGallery () {
+      this.showGallery = false
+    }
   }
 }
 </script>
