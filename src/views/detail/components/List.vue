@@ -36,11 +36,11 @@ export default {
       position: relative;
       margin-right: .08rem;
       display: inline-block;
-      width: .24rem;
-      height: .24rem;
+      width: .28rem;
+      height: .28rem;
       background: url('../../../assets/images/logo.png') no-repeat center;
       margin-left: .1rem;
-      background-size: .24rem .24rem;
+      background-size: .28rem .28rem;
     }
   }
   .item-children {
