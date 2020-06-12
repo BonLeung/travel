@@ -35,7 +35,7 @@ export default {
     handleScroll () {
       console.log('scroll')
       const top = document.documentElement.scrollTop || document.body.scrollTop
-      if (top < 40) {
+      if (top < 46) {
         this.showHeader = false
       } else {
         this.showHeader = true
@@ -58,8 +58,8 @@ export default {
     position: absolute;
     top: .2rem;
     left: .2rem;
-    width: .6rem;
-    height: .6rem;
+    width: .72rem;
+    height: .72rem;
     border-radius: .3rem;
     text-align: center;
     background: rgba(0, 0, 0, .5);
