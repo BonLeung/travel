@@ -47,5 +47,6 @@ table {
 	border-spacing: 0;
 }
 html {
+	touch-action: manipulation;
 	font-size: 50px;
 }
