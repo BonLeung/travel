@@ -28,12 +28,13 @@ export default {
   .item-title {
     padding: 0 .1rem;
     height: .8rem;
-    font-size: .32rem;
     display: flex;
     align-items: center;
+    font-size: .28rem;
+    color: #222;
     .item-title-icon {
       position: relative;
-      margin-right: .1rem;
+      margin-right: .08rem;
       display: inline-block;
       width: .24rem;
       height: .24rem;

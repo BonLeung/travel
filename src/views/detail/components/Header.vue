@@ -60,7 +60,7 @@ export default {
     left: .2rem;
     width: .72rem;
     height: .72rem;
-    border-radius: .3rem;
+    border-radius: 50%;
     text-align: center;
     background: rgba(0, 0, 0, .5);
     z-index: 2;
