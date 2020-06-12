@@ -2,7 +2,9 @@
   <div class="detail">
     <detail-header />
     <detail-banner :bannerImg="bannerImg" :sightName="sightName" @showGallery="handleShowGallery" />
-    <gallery v-show="showGallery" :imgs="galleryImgs" @hide="handleHideGallery" />
+    <fade-animation v-show="showGallery">
+      <gallery :imgs="galleryImgs" @hide="handleHideGallery" />
+    </fade-animation>
     <detail-list :list="list" />
   </div>
 </template>
@@ -13,13 +15,15 @@ import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailList from './components/List'
 import Gallery from 'components/common/Gallery.vue'
+import FadeAnimation from 'components/common/Fade.vue'
 
 export default {
   components: {
     DetailBanner,
     DetailHeader,
     DetailList,
-    Gallery
+    Gallery,
+    FadeAnimation
   },
   data () {
     return {
@@ -61,6 +65,6 @@ export default {
 
 <style lang="scss" scoped>
 .detail {
-  height: 20rem;
+  height: 18rem;
 }
 </style>

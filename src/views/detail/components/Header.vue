@@ -34,7 +34,7 @@ export default {
   methods: {
     handleScroll () {
       console.log('scroll')
-      const top = document.documentElement.scrollTop || document.body.scrollTop
+      const top = document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
       if (top < 46) {
         this.showHeader = false
       } else {
