@@ -5,9 +5,6 @@
       <div class="banner-title">大连圣亚海洋世界(AAAA景区)</div>
       <div class="banner-number"><span class="iconfont icon-pic"></span>39</div>
     </div>
-    <div class="back-wrapper" @click.stop="goBack">
-      <span class="iconfont icon-back"></span>
-    </div>
   </div>
 </template>
 
@@ -26,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/assets/styles/mixins.scss';
+@import '~@/assets/styles/mixin.scss';
 
 .banner {
   position: relative;
@@ -66,22 +63,6 @@ export default {
       .icon-pic {
         margin-right: .1rem;
       }
-    }
-  }
-  .back-wrapper {
-    position: absolute;
-    top: .2rem;
-    left: .2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: .6rem;
-    height: .6rem;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, .5);
-    .icon-back {
-      font-size: .32rem;
-      color: #fff;
     }
   }
 }

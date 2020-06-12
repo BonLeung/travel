@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="detail">
+    <detail-header />
     <detail-banner @showGallery="handleShowGallery" />
     <gallery v-show="showGallery" :imgs="galleryImgs" @hide="handleHideGallery" />
   </div>
@@ -7,11 +8,13 @@
 
 <script>
 import DetailBanner from './components/Banner'
+import DetailHeader from './components/Header'
 import Gallery from 'components/common/Gallery.vue'
 
 export default {
   components: {
     DetailBanner,
+    DetailHeader,
     Gallery
   },
   data () {
@@ -32,5 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.detail {
+  height: 50rem;
+}
 </style>

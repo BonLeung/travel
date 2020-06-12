@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '~@/assets/styles/mixins.scss';
+@import '~@/assets/styles/mixin.scss';
 
 .recommend {
   margin-top: .1rem;
